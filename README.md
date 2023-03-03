@@ -4,6 +4,7 @@
 
 ## TODOs
 - [ ] Exploratory Data Analysis
+- [ ] Preprocessing
 - [ ] Model Training
 - [ ] API Development
 - [ ] CI/CD Pipeline
