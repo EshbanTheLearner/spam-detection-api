@@ -56,3 +56,8 @@ def objective(trial):
     score = cross_val_score(classifier_obj, X_train, y_train, n_jobs=-1, cv=3)
     acc = score.mean()
     return acc
+
+study = optuna.create_study(direction="maximize")
+study.optimize(objective, n_trials=100)
+
+print(study.best_trial)
