@@ -3,8 +3,8 @@
 - [Dataset](https://www.kaggle.com/datasets/venky73/spam-mails-dataset)
 
 ## TODOs
-- [ x ] Exploratory Data Analysis
-- [ x ] Preprocessing
+- [x] Exploratory Data Analysis
+- [x] Preprocessing
 - [ ] Model Training
     - [ ] Weights and Biases Integration for Experiment Tracking
     - [ ] Optuna for Hyperparameter Optimization
