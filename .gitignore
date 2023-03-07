@@ -1,5 +1,6 @@
 *.csv
 *.zip
+*.joblib
 .ipynb_checkpoints/
 __pycache__/
 wandb/
