@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 import wandb
-import pickle
+import joblib
 
 wandb.init()
 
@@ -33,3 +33,6 @@ wandb.sklearn.plot_learning_curve(clf, X_test, y_test)
 wandb.sklearn.plot_roc(y_test, y_probas)
 wandb.sklearn.plot_confusion_matrix(y_test, y_preds, labels=clf.classes_)
 wandb.sklearn.plot_precision_recall(y_test, y_probas)
+
+joblib.dump(clf, "count_vectorizer.joblib")
+joblib.dump(clf, "naivebayes_clf.joblib")
