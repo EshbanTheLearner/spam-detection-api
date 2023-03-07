@@ -6,6 +6,8 @@ from sklearn.naive_bayes import MultinomialNB
 import wandb
 import pickle
 
+wandb.init()
+
 def load_data(path):
     df = pd.read_csv(path)
     df["text"] = df["text"].apply(lambda x: clean_text(x))
@@ -20,3 +22,14 @@ vectorizer.fit(X)
 X = vectorizer.transform(X)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42)
+
+clf = MultinomialNB()
+clf.fit(X_train, y_train)
+
+y_preds = clf.predict(X_test)
+y_probas = clf.predict_proba(X_test)
+
+wandb.sklearn.plot_learning_curve(clf, X_test, y_test)
+wandb.sklearn.plot_roc(y_test, y_probas)
+wandb.sklearn.plot_confusion_matrix(y_test, y_preds, labels=clf.classes_)
+wandb.sklearn.plot_precision_recall(y_test, y_probas)
