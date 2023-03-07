@@ -6,8 +6,9 @@
 - [x] Exploratory Data Analysis
 - [x] Preprocessing
 - [ ] Model Training
-    - [ ] Weights and Biases Integration for Experiment Tracking
-    - [ ] Optuna for Hyperparameter Optimization
+    - [x] Weights and Biases Integration for Experiment Tracking
+    - [x] Optuna for Hyperparameter Optimization
+    - [ ] DVC for Artifact Registery
 - [ ] API Development
     - [ ] FastAPI for Serving Model
 - [ ] CI/CD Pipeline
