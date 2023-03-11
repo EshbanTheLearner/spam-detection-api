@@ -34,5 +34,5 @@ wandb.sklearn.plot_roc(y_test, y_probas)
 wandb.sklearn.plot_confusion_matrix(y_test, y_preds, labels=clf.classes_)
 wandb.sklearn.plot_precision_recall(y_test, y_probas)
 
-joblib.dump(clf, "count_vectorizer.joblib")
-joblib.dump(clf, "naivebayes_clf.joblib")
+joblib.dump(clf, "./models/count_vectorizer.joblib")
+joblib.dump(clf, "./models/naivebayes_clf.joblib")
